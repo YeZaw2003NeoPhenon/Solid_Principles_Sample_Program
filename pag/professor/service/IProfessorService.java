@@ -143,9 +143,9 @@ public class IProfessorService implements ProfessorService {
 	        }
 	        
 	        Optional<Student> processedStudent = professor.getStudents()
-	        											  .stream()
-	        											  .filter(student -> student.getId() == studentId)
-	        											  .findFirst();
+	        							 .stream()
+	        							 .filter(student -> student.getId() == studentId)
+	        							 .findFirst();
 	        
 	        if(processedStudent.isPresent()) {
 	        	professor.getStudents().remove(processedStudent.get());
